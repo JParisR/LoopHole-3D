@@ -6,7 +6,8 @@ public class SpaceshipBehaviour : MonoBehaviour
 {
     public Rigidbody rb;
 
-    private float movement = 200;
+    public float movement_factor = 200;
+    public float rotation_factor = 200;
 
     // Start is called before the first frame update
     void Start()
@@ -29,27 +30,35 @@ public class SpaceshipBehaviour : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            rb.AddForce(movement * Time.deltaTime * Vector3.left);
+            rb.AddForce(movement_factor * Time.deltaTime * Vector3.left);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            rb.AddForce(movement * Time.deltaTime * Vector3.right);
+            rb.AddForce(movement_factor * Time.deltaTime * Vector3.right);
         }
         if (Input.GetKey(KeyCode.W))
         {
-            rb.AddForce(movement * Time.deltaTime * Vector3.forward);
+            rb.AddForce(movement_factor * Time.deltaTime * Vector3.forward);
         }
         if (Input.GetKey(KeyCode.S))
         {
-            rb.AddForce(movement * Time.deltaTime * Vector3.back);
+            rb.AddForce(movement_factor * Time.deltaTime * Vector3.back);
         }
         if (Input.GetKey(KeyCode.R))
         {
-            rb.AddForce(movement * Time.deltaTime * Vector3.up);
+            rb.AddForce(movement_factor * Time.deltaTime * Vector3.up);
         }
         if (Input.GetKey(KeyCode.F))
         {
-            rb.AddForce(movement * Time.deltaTime * Vector3.down);
+            rb.AddForce(movement_factor * Time.deltaTime * Vector3.down);
+        }
+        if (Input.GetKey(KeyCode.Q))
+        {
+            rb.AddTorque(rotation_factor * Time.deltaTime * Vector3.up);
+        }
+        if (Input.GetKey(KeyCode.E))
+        {
+            rb.AddTorque(rotation_factor * Time.deltaTime * Vector3.down);
         }
     }
 }
