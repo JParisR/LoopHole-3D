@@ -278,7 +278,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 291ff2f6711e84946b715cbc04c28b0b,
         type: 3}
       propertyPath: m_Name
-      value: Prop1 (2)
+      value: Prop (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 291ff2f6711e84946b715cbc04c28b0b, type: 3}
@@ -360,7 +360,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467525065}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 8, z: -20}
+  m_LocalPosition: {x: 0, y: 15, z: -30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -379,7 +379,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1797529362}
-  cameraDistance: {x: 0, y: 8, z: -20}
+  cameraDistance: {x: 0, y: 15, z: -30}
+  smoothingTime: 0.1
 --- !u!1 &768888631 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 291ff2f6711e84946b715cbc04c28b0b,
@@ -481,7 +482,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 291ff2f6711e84946b715cbc04c28b0b,
         type: 3}
       propertyPath: m_Name
-      value: Prop1
+      value: Prop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 291ff2f6711e84946b715cbc04c28b0b, type: 3}
@@ -586,7 +587,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 291ff2f6711e84946b715cbc04c28b0b,
         type: 3}
       propertyPath: m_Name
-      value: Prop1 (1)
+      value: Prop (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 291ff2f6711e84946b715cbc04c28b0b, type: 3}
@@ -644,7 +645,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20bd82826b284104b9184cab38611771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  smoothingTime: 0.8
+  leftPosition: {x: -40, y: 0, z: 0}
+  rightPosition: {x: 40, y: 0, z: 0}
+  topPosition: {x: 0, y: 25, z: 0}
+  bottomPosition: {x: 0, y: -25, z: 0}
 --- !u!4 &1797529362 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 291ff2f6711e84946b715cbc04c28b0b,

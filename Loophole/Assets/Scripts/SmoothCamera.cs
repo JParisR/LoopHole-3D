@@ -1,25 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SmoothCamera : MonoBehaviour {
 
-    public Transform player;
-    public Vector3 cameraDistance = Vector3.zero;
-    private Vector3 velocity = Vector3.zero;
+    public Transform player; // Elemento a enfocar
+    public Vector3 cameraDistance = Vector3.zero; // Posición de la cámara relativa al objeto que enfoca
+    public float smoothingTime = 1f; // Tiempo de suavizado del movimiento (segundos)
+    private Vector3 velocity = Vector3.zero; // Velocidad actual de la cámara
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
+        // Si se ha asignado un objeto que enfocar
         if (player)
         {
-            transform.position = Vector3.SmoothDamp(transform.position, player.position + cameraDistance, ref velocity, 1);
+            // Interpola y suaviza el movimiento a la nueva posición
+            transform.position = Vector3.SmoothDamp(transform.position, player.position + cameraDistance, ref velocity, smoothingTime);
         }
     }
 }
