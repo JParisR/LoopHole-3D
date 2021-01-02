@@ -526,8 +526,7 @@ MonoBehaviour:
   asteroidTypes:
   - {fileID: 768888631}
   spawnBoxSize: {x: 300, y: 200, z: 100}
-  initialSpeed: {x: 0, y: 0, z: -200}
-  minimumSpeed: {x: 0, y: 0, z: -50}
+  displacementSpeed: {x: 0, y: 0, z: -200}
   maxRandomTranslationSpeed: {x: 10, y: 10, z: 10}
   maxRandomRotationSpeed: {x: 1, y: 1, z: 1}
   despawnDistance: 520

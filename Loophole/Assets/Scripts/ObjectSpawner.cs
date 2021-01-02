@@ -5,7 +5,6 @@ public class ObjectSpawner : MonoBehaviour
     public GameObject[] asteroidTypes; // Array con tipos de objetos a crear
     public Vector3 spawnBoxSize; // Tamaño de la caja en la que se crean los objetos
     public Vector3 displacementSpeed; // Velocidad de los objetos respecto a la nave.
-    public Vector3 minimumSpeed; // Velocidad mínima de los objetos para considerar que están "bloqueados" (ver ensureObjectIsMoving).
     public Vector3 maxRandomTranslationSpeed; // Velocidad máxima aleatoria al crear el objeto
     public Vector3 maxRandomRotationSpeed; // Rotación máxima aleatoria al crear el objeto
     public float despawnDistance; // Distancia de destrucción del objeto desde el origen del spawner.
