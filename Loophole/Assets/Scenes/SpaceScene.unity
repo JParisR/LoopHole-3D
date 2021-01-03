@@ -435,6 +435,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 291ff2f6711e84946b715cbc04c28b0b, type: 3}
+--- !u!1 &964397608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 964397609}
+  m_Layer: 0
+  m_Name: shot spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &964397609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964397608}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1088}
+  m_LocalScale: {x: 0.009999997, y: 0.009999997, z: 0.01}
+  m_Children: []
+  m_Father: {fileID: 1797529362}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1797529358 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 291ff2f6711e84946b715cbc04c28b0b,
@@ -458,6 +488,22 @@ MonoBehaviour:
   rightPosition: {x: 40, y: 0, z: 0}
   topPosition: {x: 0, y: 25, z: 0}
   bottomPosition: {x: 0, y: -25, z: 0}
+--- !u!114 &1797529360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797529358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a0e9bd66b2de394fb5747e8dcc99eb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shot: {fileID: 115386, guid: 1d37014fd411c524db3696bba6ff1d21, type: 3}
+  shotSpawn: {fileID: 964397609}
+  shootRate: 0.2
+  destroyTime: 3
 --- !u!4 &1797529362 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 291ff2f6711e84946b715cbc04c28b0b,
