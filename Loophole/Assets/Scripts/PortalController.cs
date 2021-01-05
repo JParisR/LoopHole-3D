@@ -18,6 +18,15 @@ public class PortalController : MonoBehaviour
         
     }
 
+    void OnTriggerEnter (Collider collider)
+    {
+        if (collider.name != "Player Spaceship")        
+        {
+            Destroy(collider);
+        }
+    }
+
+
     public void dropSpeed(int s)
     {
         speed = s;
