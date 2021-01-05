@@ -20,10 +20,10 @@ public class PortalController : MonoBehaviour
 
     void OnTriggerEnter (Collider collider)
     {
-        if (collider.name != "Player Spaceship")        
-        {
-            Destroy(collider);
-        }
+        //if (collider.name != "Player Spaceship")        
+        //{
+        //    Destroy(collider);
+        //}
     }
 
 

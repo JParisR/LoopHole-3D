@@ -85,8 +85,6 @@ public class SpaceshipBehaviour : MonoBehaviour
             //portal.GetComponent<PortalController>().dropSpeed(3);
             GameObject spaceship = GameObject.Find("Player Spaceship");
             MeshRenderer renderer = spaceship.GetComponent<MeshRenderer>();
-            //Material actualmaterial = renderer.material;
-            //Debug.Log(actualmaterial);
             renderer.material = mymaterial;
         }
     }
