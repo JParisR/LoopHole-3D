@@ -5,34 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class ControlMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void empezarJuego()
+    public void StartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    public void salirJuego()
+    public void QuitGame()
     {
         Application.Quit();
     }
 
-    public void volverMenuPricipal()
-    {
-        SceneManager.LoadScene(0);
-    }
-
-    public void reanudar()
-    {
-        SceneManager.LoadScene(1);
-    }
 }
