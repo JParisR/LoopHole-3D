@@ -2,6 +2,10 @@
 
 public class SpaceshipBehaviour : MonoBehaviour
 {
+    public int health;
+    public int score;
+    public Material mymaterial;
+
     // Variables públicas ajustables desde el inspector de Unity
     public float smoothingTime = 1f; // Tiempo de suavizado entre posiciones (segundos)
     public Vector3 leftPosition = Vector3.left * 1f; // Posición al pulsar tecla izquierda
@@ -16,7 +20,8 @@ public class SpaceshipBehaviour : MonoBehaviour
     /** Start se ejecuta justo antes de dibujar el primer fotograma */
     void Start()
     {
-
+        health = 5;    
+        score = 0;
     }
 
     /** 
@@ -71,4 +76,24 @@ public class SpaceshipBehaviour : MonoBehaviour
 
         return input;
     }
+
+    void OnTriggerEnter (Collider collider)
+    {
+        if (collider.name == "Portal")        
+        {
+            //GameObject portal = GameObject.Find("Portal");
+            //portal.GetComponent<PortalController>().dropSpeed(3);
+            GameObject spaceship = GameObject.Find("Player Spaceship");
+            MeshRenderer renderer = spaceship.GetComponent<MeshRenderer>();
+            renderer.material = mymaterial;
+        }
+    }
+
+	public void TakeDamage(int damage)
+	{
+		health -= damage;
+		Debug.Log("Health = " + health.ToString());
+	}
+
+
 }
