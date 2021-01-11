@@ -14,7 +14,7 @@ public class PortalController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 0, speed));         
+        //gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 0, speed));         
         
     }
 

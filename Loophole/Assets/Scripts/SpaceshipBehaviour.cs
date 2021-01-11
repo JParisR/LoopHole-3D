@@ -2,26 +2,28 @@
 
 public class SpaceshipBehaviour : MonoBehaviour
 {
-    public int health;
-    public int score;
-    public Material mymaterial;
+    /* Las variables públicas son ajustables desde el inspector de Unity */
 
-    // Variables públicas ajustables desde el inspector de Unity
+    // Movimiento nave
     public float smoothingTime = 1f; // Tiempo de suavizado entre posiciones (segundos)
     public Vector3 leftPosition = Vector3.left * 1f; // Posición al pulsar tecla izquierda
     public Vector3 rightPosition = Vector3.right * 1f; // Posición al pulsar tecla derecha
     public Vector3 topPosition = Vector3.up * 1f; // Posición al pulsar tecla arriba
     public Vector3 bottomPosition = Vector3.down * 1f; // Posición al pulsar tecla abajo
-
-    // Variables privadas
     private Vector3 targetPosition = Vector3.zero; // Posición "destino" a la que se intenta llegar
     private Vector3 velocity = Vector3.zero; // Velocidad actual del suavizado
+
+    // Salud y puntuación
+    public int health = 5;
+    public int score = 0;
+
+    // Material para animaciones
+    public Material mymaterial;
 
     /** Start se ejecuta justo antes de dibujar el primer fotograma */
     void Start()
     {
-        health = 5;    
-        score = 0;
+
     }
 
     /** 
