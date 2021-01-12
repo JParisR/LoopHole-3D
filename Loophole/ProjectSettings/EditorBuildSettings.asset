@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SpaceScene.unity
     guid: 99467535a987f314a9427c8cdfea1cec
+  - enabled: 1
+    path: Assets/Scenes/LevelEnemyShips.unity
+    guid: 12c2cc0059d184c4191a915aed34c9fc
   m_configObjects: {}

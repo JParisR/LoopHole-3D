@@ -2,16 +2,15 @@
 
 public class MissileSpeed : MonoBehaviour
 {
-    // Start is called before the first frame update
     private Rigidbody rb;
-    public float speed = 80;
+    public float speed = 80; //Velocidad del misil
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
+    //Movimiento del misil
     void Update()
     {
         rb.velocity = transform.forward * speed;
