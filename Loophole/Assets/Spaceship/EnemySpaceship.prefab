@@ -146,11 +146,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ffe900150c01cf449be0c437b7e8e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetwenShoots: 0.5
-  explosionEfects: {fileID: 1600244666139023444}
-  enemyShip: {fileID: 192754}
   shot: {fileID: 115386, guid: 2c2e8c6a738fd2246be861ab2777ad15, type: 3}
   shotSpawn: {fileID: 7759908137989036494}
+  enemyShip: {fileID: 192754}
+  explosionEfects: {fileID: 1600244666139023444}
+  timeBetwenShoots: 1
   destroyTime: 3
 --- !u!1 &3094740472690004313
 GameObject:

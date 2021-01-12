@@ -1168,7 +1168,7 @@ MonoBehaviour:
   itemCount: 1
   movingLevelScript: {fileID: 1891677712}
   spawnedObjectsParent: {fileID: 1891677713}
-  timeWait: 1
+  timeWait: 0.6
   explosionEfects: {fileID: 0}
 --- !u!1 &1066503426
 GameObject:
@@ -2546,7 +2546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e2f72e7c1ba47645bd116fdb06af3a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displacementSpeed: {x: 0, y: 0, z: -10}
+  displacementSpeed: {x: 0, y: 0, z: -80}
   despawnDistance: 500
   zDespawnLimit: -30
 --- !u!4 &1891677713
