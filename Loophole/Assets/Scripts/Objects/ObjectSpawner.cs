@@ -7,6 +7,7 @@ public class ObjectSpawner : MonoBehaviour
     public Vector3 maxRandomTranslationSpeed; // Velocidad máxima aleatoria al crear el objeto
     public Vector3 maxRandomRotationSpeed; // Rotación máxima aleatoria al crear el objeto
     public int itemCount; // Límite de objetos simulados concurrentemente.
+    public bool enemyObjects;
 
     public MovingLevel movingLevelScript;
     public Transform spawnedObjectsParent;
@@ -41,6 +42,16 @@ public class ObjectSpawner : MonoBehaviour
                 // La coloca como hijo del objeto especificado
                 instance.transform.SetParent(spawnedObjectsParent);
 
+                // 
+                if(enemyObjects == true)
+                {
+                    instance.layer = 9;
+                    foreach (Transform trans in instance.GetComponentsInChildren<Transform>(true))
+                    {
+                        trans.gameObject.layer = 9;
+                    }
+                }
+
                 // Obtiene rigidbody para añadir una velocidad y rotación aleatorias
                 Rigidbody rb = instance.GetComponent<Rigidbody>();
                 rb.AddTorque(Utilities.RandomVector3(maxRandomRotationSpeed), ForceMode.VelocityChange);
@@ -56,5 +67,4 @@ public class ObjectSpawner : MonoBehaviour
     {
         spawnedObjects--;
     }
-
 }
