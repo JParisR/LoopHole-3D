@@ -14146,7 +14146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a718c138b20419b499c3d92b17e6ff7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tumble: 0.25
+  tumble: 0.5
 --- !u!136 &8358322811833673547
 CapsuleCollider:
   m_ObjectHideFlags: 0

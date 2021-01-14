@@ -2,67 +2,59 @@
 
 public class EnemyShipsSpawner : MonoBehaviour
 {
-    public GameObject[] asteroidTypes; // Array con tipos de objetos a crear
+    public GameObject enemySpaceship; // Objeto nave enemiga
+    public GameObject playerSpaceship; // Objeto nave jugador
+    public Transform spawnedObjectsParent; // Objeto padre
     public Vector3 spawnBoxSize; // Tamaño de la caja en la que se crean los objetos
-    public Vector3 maxRandomTranslationSpeed; // Velocidad máxima aleatoria al crear el objeto
-    public Vector3 maxRandomRotationSpeed; // Rotación máxima aleatoria al crear el objeto
-    public int itemCount = 5; // Límite de objetos simulados concurrentemente.
-    public MovingLevel movingLevelScript;
-    public Transform spawnedObjectsParent;
-    public float timeWait = 1;
-    private float timeBetwenShoots;
-    public GameObject explosionEfects;
+    public float timeBetweenSpawns = 0.5f;// Tiempo entre spawns (nave enemiga)
 
-    private int spawnedObjects = 0; // Contador de objetos simulados
+    private float timeLeftToSpawn; // Tiempo restante para spawnear
+    private Vector3 playerPosition; // Posición del jugador
+    private GameObject instance; // Instancia nave enemiga
+    private float timeLeftToRespawn = 0; // Tiempo restante para respawnear en misma posición
 
     private void Start()
     {
-        movingLevelScript.OnDespawn += DecreaseSpawnCounter;
+        playerPosition = playerSpaceship.transform.position; //Obtiene la posición inicial de jugador
     }
 
     void FixedUpdate()
     {
-        if (timeBetwenShoots <= 0)
+        //Controla el spawn de naves a través del tiempo
+        if (timeLeftToSpawn <= 0)
         {
             SpawnObjects();
-            timeBetwenShoots = timeWait;
-            itemCount++;
+            timeLeftToSpawn = timeBetweenSpawns;
         }
         else
         {
-            timeBetwenShoots -= Time.deltaTime;
+            timeLeftToSpawn -= Time.deltaTime;
         }
     }
 
     // Crea objetos si todavía no se llegó al número límite
     private void SpawnObjects()
     {
-        // Para cada objeto en los tipos definidos
-        foreach (GameObject o in asteroidTypes)
+        // Si el jugador no se mueve, spawneamos una nave en su misma posición (x e y) forzando así
+        // su movimiento. Esperamos un tiempo entre el spawn de naves en la misma posición para evitar
+        // que se alcacen entre ellas.
+        if ((playerPosition.x - playerSpaceship.transform.position.x) < 5 && timeLeftToRespawn <= 0)
         {
-            // Si todavía no se ha llegado al número máximo de objetos, crea uno.
-            // De esta manera se van creando progresivamente uno por fotograma y no todos juntos.
-            // Pendiente de retocar dependiendo de qué manera queremos que aparezcan los objetos.
-
-                // Crea una instancia del objeto con posición aleatoria
-                GameObject instance = Instantiate(o, transform.position + Utilities.RandomVector3(spawnBoxSize), Quaternion.identity);
-
-                // La coloca como hijo del objeto especificado
-                instance.transform.SetParent(spawnedObjectsParent);
-
-                // Obtiene rigidbody para añadir una velocidad y rotación aleatorias
-                Rigidbody rb = instance.GetComponent<Rigidbody>();
-
-                // Aumenta contador de objetos simulados
-                spawnedObjects++;
-
+            instance = Instantiate(enemySpaceship, new Vector3(playerPosition.x - 10, playerPosition.y, transform.position.z), Quaternion.identity);
+            timeLeftToRespawn = 0.1f;   
         }
+        else
+        { 
+            // Si el jugador se está moviendo, spawneamos naves en posiciones aleatorias
+            timeLeftToRespawn -= Time.deltaTime;
+            instance = Instantiate(enemySpaceship, transform.position + Utilities.RandomVector3(spawnBoxSize), Quaternion.identity);
+        }
+
+        // Obtiene la posición del jugador
+        playerPosition = playerSpaceship.transform.position;
+           
+        // La coloca como hijo del objeto especificado
+        instance.transform.SetParent(spawnedObjectsParent);
     }
-
-    private void DecreaseSpawnCounter()
-    {
-        spawnedObjects--;
-    }
-
-
+    
 }
