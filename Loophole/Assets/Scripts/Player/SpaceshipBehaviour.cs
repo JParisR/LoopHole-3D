@@ -21,10 +21,13 @@ public class SpaceshipBehaviour : MonoBehaviour
     // Material para animaciones
     public Material mymaterial;
 
+    // Sonido de la nave
+    public AudioSource spaceshipSound;
+
     /** Start se ejecuta justo antes de dibujar el primer fotograma */
     void Start()
     {
-
+        spaceshipSound?.Play();
     }
 
     /** 
