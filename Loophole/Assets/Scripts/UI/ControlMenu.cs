@@ -22,7 +22,7 @@ public class ControlMenu : MonoBehaviour
     public void ReturnMenu()
     {
         SceneManager.LoadScene("MenuScene");
-        PlayerPrefs.SetString("escena", "SpaceScene");
+        PlayerPrefs.SetString("escena", "EarthMoon");
         Time.timeScale = 1f;
     }
 

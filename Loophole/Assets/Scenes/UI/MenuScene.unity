@@ -1262,7 +1262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5731532a090a20f449d0a00a352469f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameScene: SpaceScene
+  gameScene: EarthMoon
 --- !u!1 &2018480577
 GameObject:
   m_ObjectHideFlags: 0
