@@ -486,7 +486,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2123065872}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &563644702
 MonoBehaviour:
@@ -610,7 +610,7 @@ Transform:
   - {fileID: 90855208}
   - {fileID: 1565138836}
   m_Father: {fileID: 2123065872}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &836909376
 GameObject:
@@ -1141,11 +1141,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049973766}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.121, z: 10.3}
-  m_LocalScale: {x: 0.009999997, y: 0.009999997, z: 0.01}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.100005, y: 0, z: 1030}
+  m_LocalScale: {x: 100.00003, y: 100.00003, z: 100}
   m_Children: []
-  m_Father: {fileID: 1395585514}
+  m_Father: {fileID: 2123065872}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1049973768
@@ -1160,9 +1160,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f4322a541854e2478738ac4ce6129fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movingLevel: {fileID: 1891677712}
+  despawnDistance: 520
+  zDespawnLimit: -30
+  parallaxAmount: 1
   enemySpaceship: {fileID: 192754, guid: 81a45116981bb514c866bab4841bb1fe, type: 3}
   playerSpaceship: {fileID: 1395585506}
-  spawnedObjectsParent: {fileID: 1891677713}
   spawnBoxSize: {x: 70, y: 50, z: 1}
   timeBetweenSpawns: 0.5
 --- !u!1 &1066503426
@@ -2299,11 +2302,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1611859108}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 9.9}
-  m_LocalScale: {x: 0.009999997, y: 0.009999997, z: 0.01}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 989.99994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1395585514}
+  m_Father: {fileID: 2123065872}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1611859110
@@ -2318,19 +2321,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943c52c9e569640449fa07f2486e0f83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroidTypes:
-  - {fileID: 2470223116937383593, guid: f33a407650d6ff84281e03de8e728efa, type: 3}
+  movingLevel: {fileID: 1891677712}
+  despawnDistance: 520
+  zDespawnLimit: -30
+  parallaxAmount: 1
+  objectTypes:
   - {fileID: 2059507735890109511, guid: 9bfc78769f6631e479e3efb93b8a2a5c, type: 3}
   - {fileID: 8358322812350481579, guid: 1e63d196698abf147b5a78260b54a600, type: 3}
-  - {fileID: 8358322812350481579, guid: 1e63d196698abf147b5a78260b54a600, type: 3}
   - {fileID: 2470223116937383593, guid: f33a407650d6ff84281e03de8e728efa, type: 3}
-  - {fileID: 8358322812350481579, guid: 1e63d196698abf147b5a78260b54a600, type: 3}
   spawnBoxSize: {x: 400, y: 200, z: 300}
   maxRandomTranslationSpeed: {x: 10, y: 10, z: 10}
   maxRandomRotationSpeed: {x: 1, y: 1, z: 1}
   itemCount: 200
-  movingLevelScript: {fileID: 1891677712}
-  spawnedObjectsParent: {fileID: 1891677713}
+  spawnInterval: 0.1
+  enemyObjects: 0
 --- !u!1 &1822619682
 GameObject:
   m_ObjectHideFlags: 0
@@ -2560,8 +2564,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displacementSpeed: {x: 0, y: 0, z: -80}
-  despawnDistance: 500
-  zDespawnLimit: -30
 --- !u!4 &1891677713
 Transform:
   m_ObjectHideFlags: 0
@@ -2607,7 +2609,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2123065872}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!199 &1976836752
 ParticleSystemRenderer:
@@ -7360,7 +7362,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2123065872}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!108 &1988679052
 Light:
@@ -7452,6 +7454,8 @@ Transform:
   m_Children:
   - {fileID: 875082482}
   - {fileID: 1395585514}
+  - {fileID: 1049973767}
+  - {fileID: 1611859109}
   - {fileID: 1988679051}
   - {fileID: 563644701}
   - {fileID: 1976836751}
