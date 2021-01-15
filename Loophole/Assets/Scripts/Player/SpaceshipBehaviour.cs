@@ -95,6 +95,18 @@ public class SpaceshipBehaviour : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name.Contains("missileInverted(Clone)"))
+        {
+            SpaceshipBehaviour playerStats = GameObject.Find("Player Spaceship").GetComponent<SpaceshipBehaviour>();
+            playerStats.TakeDamage(1);
+        }
+        
+
+    }
+
+    
 	public void TakeDamage(int damage)
 	{
 		health -= damage;
