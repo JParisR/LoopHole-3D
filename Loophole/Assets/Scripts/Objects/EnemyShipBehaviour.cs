@@ -41,6 +41,19 @@ public class EnemyShipBehaviour : MonoBehaviour
             Invoke("DestroyShip", 0.7f); //Delay para despawnear la nave
 
         }
+        // Aquí solo tendría que hacer RaiseScore si se ha destruido por un impacto con un meteorito 
+        // o un impacto con un disparo nuestro. 
+        // tengo
+        // En caso de que colisione con la nave del jugador tendría que lanzar un TakeDamage al jugador
+        // ?? hay forma de diferencias los shots de la nave enemiga de los nuestros
+        
+        //if (collision.gameObject.name == "Shot")
+        //{
+            // sacar esto fuera y dejar solo raise
+            SpaceshipBehaviour playerStats = GameObject.Find("Player Spaceship").GetComponent<SpaceshipBehaviour>();
+            playerStats.RaiseScore(1);
+        //}
+        
 
     }
 

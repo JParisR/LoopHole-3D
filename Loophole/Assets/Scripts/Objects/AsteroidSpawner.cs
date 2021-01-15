@@ -13,7 +13,7 @@ public class AsteroidSpawner : ObjectSpawner
             {
                 GameObject instance = Instantiate(o, transform.position + Utilities.RandomVector3(spawnBoxSize), Utilities.RandomAngle());
                 instance.transform.SetParent(transform);
-
+                
                 if (enemyObjects == true)
                 {
                     instance.layer = 9;
@@ -22,7 +22,7 @@ public class AsteroidSpawner : ObjectSpawner
                         trans.gameObject.layer = 9;
                     }
                 }
-
+                
                 //SetRandomRigidbodyMovement(o.transform);
             }
             yield return new WaitForSeconds(spawnInterval);

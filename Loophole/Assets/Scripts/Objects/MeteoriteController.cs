@@ -28,7 +28,7 @@ public class MeteoriteController : MonoBehaviour
         */ 
         if (thecollision.name == "Player Spaceship")
         {
-            Debug.Log("impacto");
+            //Debug.Log("impacto");
             SpaceshipBehaviour playerStats = GameObject.Find("Player Spaceship").GetComponent<SpaceshipBehaviour>();
             playerStats.TakeDamage(1);
             HitEffect.Play();  

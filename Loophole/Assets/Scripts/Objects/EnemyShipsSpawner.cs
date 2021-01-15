@@ -55,6 +55,10 @@ public class EnemyShipsSpawner : MovingLevelGroup
 
         // La coloca como hijo del objeto especificado
         instance.transform.SetParent(transform);
+
+        // Fijamos la capa del objeto en como "enemies" para que se vea en el minimap
+        instance.layer = 9;
+
     }
 
 }

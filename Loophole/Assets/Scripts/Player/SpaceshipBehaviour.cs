@@ -97,5 +97,11 @@ public class SpaceshipBehaviour : MonoBehaviour
 		Debug.Log("Health = " + health.ToString());
 	}
 
+	public void RaiseScore(int unit)
+	{
+		score += unit;
+		Debug.Log("Score = " + score.ToString());
+	}
+
 
 }
