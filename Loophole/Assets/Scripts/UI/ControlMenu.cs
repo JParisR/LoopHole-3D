@@ -10,6 +10,20 @@ public class ControlMenu : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(gameScene);
+        PlayerPrefs.SetString("escena",gameScene);
+    }
+
+    public void LoadGame()
+    {
+        SceneManager.LoadScene(PlayerPrefs.GetString("escena"));
+    }
+
+    //Método para volver al menú principal
+    public void ReturnMenu()
+    {
+        SceneManager.LoadScene("MenuScene");
+        PlayerPrefs.SetString("escena", "SpaceScene");
+        Time.timeScale = 1f;
     }
 
     //Salimos del juego

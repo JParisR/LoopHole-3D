@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpaceshipBehaviour : MonoBehaviour
 {
@@ -102,6 +103,5 @@ public class SpaceshipBehaviour : MonoBehaviour
 		score += unit;
 		Debug.Log("Score = " + score.ToString());
 	}
-
 
 }
