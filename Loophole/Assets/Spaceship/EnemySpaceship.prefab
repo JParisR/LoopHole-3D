@@ -150,8 +150,8 @@ MonoBehaviour:
   shotSpawn: {fileID: 7759908137989036494}
   enemyShip: {fileID: 192754}
   explosionEfects: {fileID: 1600244666139023444}
-  timeBetwenShoots: 1
-  destroyTime: 3
+  timeBetwenShoots: 3
+  destroyTime: 10
 --- !u!1 &3094740472690004313
 GameObject:
   m_ObjectHideFlags: 0
