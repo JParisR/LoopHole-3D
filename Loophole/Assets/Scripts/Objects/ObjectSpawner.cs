@@ -43,10 +43,13 @@ public class ObjectSpawner : MovingLevelGroup
     protected void SetRandomRigidbodyMovement(Transform instance)
     {
         Rigidbody rb = instance.GetComponent<Rigidbody>();
-        rb.velocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
-        rb.AddTorque(Utilities.RandomVector3(maxRandomRotationSpeed), ForceMode.VelocityChange);
-        rb.AddForce(Utilities.RandomVector3(maxRandomTranslationSpeed), ForceMode.VelocityChange);
+        if (rb != null)
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            rb.AddTorque(Utilities.RandomVector3(maxRandomRotationSpeed), ForceMode.VelocityChange);
+            rb.AddForce(Utilities.RandomVector3(maxRandomTranslationSpeed), ForceMode.VelocityChange);
+        }
     }
 
     /** Recicla las instancias de los asteroides, reseteando sus físicas y devolviéndolos
