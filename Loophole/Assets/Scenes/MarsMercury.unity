@@ -3084,7 +3084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e2f72e7c1ba47645bd116fdb06af3a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displacementSpeed: {x: 0, y: 0, z: -400}
+  displacementSpeed: {x: 0, y: 0, z: -80}
 --- !u!4 &1891677713
 Transform:
   m_ObjectHideFlags: 0
