@@ -7072,7 +7072,7 @@ MonoBehaviour:
   - {fileID: 7273956540791742907, guid: 9cb5e7465eef1af4988889e41a071493, type: 3}
   - {fileID: 6516070941938034013, guid: 8a0d737915eae7a4e8c4176987503064, type: 3}
   - {fileID: 523533613071711390, guid: 0ebf9f1968066d74e9a9f74696085d52, type: 3}
-  spawnBoxSize: {x: 30, y: 30, z: 40}
+  spawnBoxSize: {x: 40, y: 30, z: 40}
   maxRandomTranslationSpeed: {x: 10, y: 10, z: 10}
   maxRandomRotationSpeed: {x: 0.5, y: 0.5, z: 0.5}
   itemCount: 10
