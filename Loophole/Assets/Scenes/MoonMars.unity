@@ -5133,6 +5133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 317710596}
   - component: {fileID: 317710597}
+  - component: {fileID: 317710598}
   m_Layer: 0
   m_Name: Scripter
   m_TagString: Untagged
@@ -5168,6 +5169,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 548562190}
   playerHealth: {fileID: 1314049032}
+--- !u!114 &317710598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317710595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0e2621a688a1d34f859abc9c97278c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreMarcador: {fileID: 1877376581}
+  playerScore: {fileID: 1314049032}
 --- !u!1 &367184084
 GameObject:
   m_ObjectHideFlags: 0
