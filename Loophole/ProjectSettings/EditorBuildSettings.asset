@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/UI/MenuScene.unity
+    guid: 641ceb84e908a9640ac1e2805dd44f67
+  - enabled: 1
+    path: Assets/Scenes/EarthMoon.unity
+    guid: 99467535a987f314a9427c8cdfea1cec
+  - enabled: 1
+    path: Assets/Scenes/MarsMercury.unity
+    guid: 12c2cc0059d184c4191a915aed34c9fc
+  - enabled: 1
+    path: Assets/Scenes/MoonMars.unity
+    guid: 7c553a998f116484fa3a2ebc205cb709
+  - enabled: 1
+    path: Assets/Scenes/UI/WinScene.unity
+    guid: 6d0e377e0e1351145be831eeccb9ef09
+  - enabled: 1
+    path: Assets/Scenes/UI/GameOverScene.unity
+    guid: 4f34ba791d06718458b8622d28c38760
   m_configObjects: {}
